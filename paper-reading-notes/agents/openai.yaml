@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Reading Notes"
+  short_description: "Turn papers into critical Markdown notes"
+  default_prompt: "Use $paper-reading-notes to read this paper into concise Markdown notes with formulas, figures, and critical analysis."
