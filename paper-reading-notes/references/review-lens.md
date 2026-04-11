@@ -16,13 +16,17 @@ Use these prompts to avoid becoming trapped in the paper's own narrative.
 
 ## Domain-Specific Claims
 
-- If the paper claims domain-informed modeling, does the implementation still match that claim after augmentations and engineering details are included?
+Apply these only when the paper makes domain-specific, theory-informed, or measurement-specific claims.
+
+- Does the implementation still match the claim after augmentations and engineering details are included?
 - Does the training target or measurement target truly match the paper's interpretation?
 - Does the loss optimize the interpretation the paper claims?
 
 ## External Guidance or Extra Signals
 
-- Is the auxiliary target, teacher, retrieved context, annotation source, simulator, or extra modality meaningful at the claimed granularity?
+Apply these only when the method uses auxiliary targets, teachers, retrieved context, annotation sources, simulators, extra modalities, or other external signals.
+
+- Is the external signal meaningful at the claimed granularity?
 - How sensitive is the method to alignment errors, timestamp mismatch, annotation noise, distribution shift, or source bias?
 - Could the external signal inject a bias that suppresses task-relevant structure?
 

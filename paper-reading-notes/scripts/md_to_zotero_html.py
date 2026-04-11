@@ -3,7 +3,13 @@ import html
 import re
 from pathlib import Path
 
-import markdown
+try:
+    import markdown
+except ImportError as exc:
+    raise SystemExit(
+        "Missing dependency: Python-Markdown is required for HTML export. "
+        "Install it with: python -m pip install markdown"
+    ) from exc
 
 
 DISPLAY_MATH_RE = re.compile(r"\$\$(.*?)\$\$", re.DOTALL)

@@ -32,7 +32,9 @@ Produce concise but rigorous paper notes. Do not just restate the paper. Reconst
 
 5. Handle figures deliberately.
    - Prefer direct extraction of embedded PDF image objects via `scripts/extract_pdf_images.py`.
-   - Fall back to page rendering and region extraction only when the figure is not stored as a complete embedded image.
+   - Review `manifest.json` after extraction and match candidates to the paper's figure number, caption, page, dimensions, and surrounding text before inserting them.
+   - Filter out logos, masks, icons, repeated fragments, and decorative images unless the user explicitly asks for exhaustive extraction.
+   - Fall back to page rendering and region extraction only when the figure is not stored as a complete embedded image or the embedded objects are fragmented.
    - Insert each figure in the section where it is discussed. Do not create a separate "key figures" section unless the user explicitly asks for one.
    - Add a short caption for each inserted figure.
    - Size figures by importance and density:
@@ -66,8 +68,8 @@ Produce concise but rigorous paper notes. Do not just restate the paper. Reconst
 Apply this lens after reconstructing the method:
 
 - Ask whether the claimed gain comes from the proposed idea itself, more data, stronger supervision, better tuning, implementation details, or evaluation setup.
-- Ask whether "physics-informed" language is fully supported by the implementation or only partially supported.
-- Ask whether cross-modal supervision introduces bias, leakage, stronger supervision than advertised, or dependence on alignment quality.
+- When the paper makes domain-informed claims, ask whether the implementation actually supports the domain interpretation or only uses domain language around a conventional method.
+- When the paper uses external guidance, auxiliary targets, retrieved context, simulators, teachers, or extra modalities, ask whether these signals introduce bias, leakage, stronger supervision than advertised, or dependence on alignment quality.
 - Ask whether the training target truly matches the claimed interpretation.
 - Ask what ablations are still missing to validate the paper's strongest claim.
 
@@ -91,3 +93,9 @@ If the user asks for a written artifact, save it as Markdown in the requested lo
 - Better Notes HTML export script: `scripts/md_to_zotero_html.py`
 - Detailed note-writing rules: `references/note-writing-rules.md`
 - Detailed critical review prompts: `references/review-lens.md`
+
+Script dependencies:
+
+- `scripts/extract_pdf_images.py` requires PyMuPDF, imported as `fitz`.
+- `scripts/md_to_zotero_html.py` requires Python-Markdown, imported as `markdown`.
+- If either dependency is missing, install with `python -m pip install pymupdf markdown` or report that the script could not be run in the current environment.

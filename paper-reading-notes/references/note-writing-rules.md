@@ -18,6 +18,9 @@ Use these rules when turning a paper into Markdown notes.
 
 ## Figure Rules
 
+- After extracting embedded images, inspect `manifest.json` and match images to paper figures by page, caption, size, and surrounding text.
+- Filter out logos, masks, icons, repeated fragments, and decorative images unless the user asks for exhaustive extraction.
+- Use rendered-page cropping when a figure is split into multiple embedded objects or cannot be identified as a complete extracted image.
 - Prefer figures that carry structural information:
   - overall framework
   - dataset organization

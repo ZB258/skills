@@ -2,7 +2,13 @@ import argparse
 import json
 from pathlib import Path
 
-import fitz
+try:
+    import fitz
+except ImportError as exc:
+    raise SystemExit(
+        "Missing dependency: PyMuPDF is required for PDF image extraction. "
+        "Install it with: python -m pip install pymupdf"
+    ) from exc
 
 
 def parse_pages(spec: str | None) -> set[int] | None:
