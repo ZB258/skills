@@ -14,6 +14,7 @@ This repository is a workspace for maintaining multiple Codex skills. Keep guida
 - Prefer ASCII unless a file already uses non-ASCII or the content requires it.
 - Fix obvious spelling mistakes in code, user prompts, documentation, and skill text when encountered, and mention the correction in the final response.
 - Do not add auxiliary files such as README, changelog, or installation notes inside a skill unless they are directly required for the skill to function.
+- Update the repository root `README.md` in the same change whenever a skill is added, removed, renamed, or materially changed.
 
 ## Skill Structure
 
