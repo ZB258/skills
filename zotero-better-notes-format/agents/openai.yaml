@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zotero Better Notes Format"
+  short_description: "Format notes for Zotero Better Notes"
+  default_prompt: "Use $zotero-better-notes-format to export this Markdown note as Better Notes-compatible HTML."

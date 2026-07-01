@@ -1,6 +1,6 @@
 ---
 name: paper-reading-notes
-description: Read research papers from PDF into polished Markdown notes with formulas, integrated figures, reviewer-style analysis, and optional Better Notes/Zotero-friendly HTML export. Use when the user asks for a paper's method, innovations, technical structure, formulas, evaluation or application framework, code or dataset availability, Zotero note-ready output, or a critical reading that goes beyond a plain summary.
+description: Read research papers from PDF into polished Markdown notes with formulas, integrated figures, reviewer-style analysis, and optional Zotero/Better Notes export via the zotero-better-notes-format skill. Use when the user asks for a paper's method, innovations, technical structure, formulas, evaluation or application framework, code or dataset availability, Zotero note-ready output, or a critical reading that goes beyond a plain summary.
 ---
 
 # Paper Reading Notes
@@ -49,13 +49,9 @@ Produce concise but rigorous paper notes. Do not just restate the paper. Reconst
    - Keep code availability wording factual rather than personal.
 
 7. Export to Better Notes/Zotero HTML when requested.
-   - Keep Markdown as the source of truth.
-   - Use `scripts/md_to_zotero_html.py` to create a full preview HTML and an optional body fragment.
-   - Preserve formulas as Better Notes-compatible math nodes:
-     - Inline math: `<span class="math">$...$</span>`
-     - Display math: `<pre class="math">$$...$$</pre>`
-   - Do not convert formulas into plain `<pre>` blocks; Better Notes will not render those as math.
-   - Tell the user to copy the rendered HTML page, not the HTML source, when manually pasting into Better Notes.
+   - Read and use the `zotero-better-notes-format` skill.
+   - If skills are available as folders in the same repository, read `../zotero-better-notes-format/SKILL.md` and its referenced format rules.
+   - Keep this skill focused on paper understanding; do not duplicate Zotero/Better Notes format details here.
 
 8. Add reviewer-style judgment.
    - Include what is worth learning from the paper.
@@ -90,12 +86,12 @@ If the user asks for a written artifact, save it as Markdown in the requested lo
 ## Resources
 
 - Figure extraction script: `scripts/extract_pdf_images.py`
-- Better Notes HTML export script: `scripts/md_to_zotero_html.py`
+- Zotero/Better Notes export skill: `../zotero-better-notes-format`
 - Detailed note-writing rules: `references/note-writing-rules.md`
 - Detailed critical review prompts: `references/review-lens.md`
 
 Script dependencies:
 
 - `scripts/extract_pdf_images.py` requires PyMuPDF, imported as `fitz`.
-- `scripts/md_to_zotero_html.py` requires Python-Markdown, imported as `markdown`.
-- If either dependency is missing, install with `python -m pip install pymupdf markdown` or report that the script could not be run in the current environment.
+- Zotero/Better Notes HTML export dependencies are owned by `zotero-better-notes-format`.
+- If a dependency is missing, install only the package needed for the current operation or report that the script could not be run in the current environment.

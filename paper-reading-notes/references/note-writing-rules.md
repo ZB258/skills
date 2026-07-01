@@ -41,12 +41,5 @@ Use these rules when turning a paper into Markdown notes.
 
 ## Better Notes/Zotero HTML Export
 
-- Keep Markdown as the editable master file.
-- Export HTML only as a delivery format for Better Notes or Zotero rich-text notes.
-- Better Notes handles math best when formulas enter through its Markdown/math pipeline or through math-marked HTML.
-- For exported HTML fragments, use these math shapes:
-  - Inline math: `<span class="math">$...$</span>`
-  - Display math: `<pre class="math">$$...$$</pre>`
-- Do not emit display formulas as ordinary `<div><pre>...</pre></div>` blocks.
-- When troubleshooting manual paste, distinguish copying rendered HTML from copying HTML source code.
-- If formulas still fail after HTML paste, test direct Markdown paste with `$...$` and `$$...$$` preserved.
+- Use the `zotero-better-notes-format` skill for Better Notes/Zotero formatting, export scripts, math-node requirements, and paste troubleshooting.
+- Keep paper-reading rules focused on the Markdown note content before export.
