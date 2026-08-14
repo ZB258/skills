@@ -21,6 +21,20 @@ Script dependencies:
 python -m pip install pymupdf markdown
 ```
 
+### research-pipeline
+
+`research-pipeline` is an agent-agnostic research workflow skill: discover research ideas from a literature corpus, then land them through A2B root-cause analysis and cross-domain transfer. Stage one (discover ideas): scaffold the project with Git branch rules, pick a reproducible baseline, batch-analyze top-conference papers, generate "surprise" experiments (MinerU → analysis-paper notes → deep-read problem-x-phenomenon cross matrix → squeeze-experiment), and locate a breakthrough via A2B. Stage two (implement ideas): pick a direction by impact-x-feasibility, drill A2B down to operator level, search other domains for existing solutions, and transfer them by creating the conditions they need.
+
+Bundled resources:
+
+- `references/workflow-manual.md`: faithful copy of the source methodology manual.
+- `references/methodology-adjustments.md`: eight deliberate deviations from the manual that are part of the workflow and must be followed.
+- `references/a2b-rules.md`: A2B analysis stages, fallback rules, and innovation grades a-d.
+- `references/credibility-tiers.md`: honesty constraints and paper credibility tiers A/B/C.
+- `pipeline/analysis-paper/SKILL.md`: self-contained sub-skill that turns a paper (MinerU-parsed Markdown) into an 11-section structured note, the single input contract consumed by all downstream batch analyses. It is an honestly labeled rebuild of the original private skill, not the original; load it directly when only single-paper notes are needed.
+
+The skill carries no scripts; it drives external tools such as the `mineru` CLI.
+
 ## Install In Codex
 
 Codex discovers skills from the skills directory under `CODEX_HOME`. If `CODEX_HOME` is not set, the default location is usually `~/.codex/skills`.
