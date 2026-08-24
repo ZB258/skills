@@ -35,6 +35,28 @@ Bundled resources:
 
 The skill carries no scripts; it drives external tools such as the `mineru` CLI.
 
+### skincare-product-research
+
+`skincare-product-research` is an evidence-oriented skincare product research expert. It evaluates a specific product or researches and compares products for a stated skin need by reasoning from the full formulation architecture, human clinical evidence, and the user's skin state and routine instead of marketing. It runs in two modes: Mode A evaluates a user-supplied product (identity resolution, functional architecture, marketing-claim audit, seven-dimension scoring, three-level price guidance) and Mode B converts a stated need into criteria and compares a broad candidate pool on decision-relevant tables.
+
+Bundled resources:
+
+- `references/evaluation-modes.md`: detailed Mode A (A1–A8) and Mode B (B1–B5) procedures.
+- `references/research-rules.md`: source hierarchy, marketing contamination control, evidence language, and terminology rules.
+- `references/category-heuristics.md`: formulation heuristics for cleansers, moisturizers, sunscreens, and retinoids/acids.
+- `references/scoring-safety-output.md`: score interpretation, safety boundaries, response style, and output templates.
+
+The skill carries no scripts; it relies on the agent's web research for formulations, evidence, and current pricing.
+
+### zotero-better-notes-format
+
+`zotero-better-notes-format` formats Markdown notes for Zotero Better Notes rich-text import while keeping Markdown as the editable source of truth. It preserves LaTeX formulas, normalizes heading hierarchy, and exports full-preview or fragment HTML via `scripts/md_to_zotero_html.py`. Use when Zotero-ready notes, Better Notes-compatible HTML, or math/table conversion for Zotero matters.
+
+Bundled resources:
+
+- `scripts/md_to_zotero_html.py`: Convert Markdown notes into Better Notes/Zotero-friendly HTML.
+- `references/format-rules.md`: Math shapes, list spacing, paste guidance, and troubleshooting.
+
 ## Install In Codex
 
 Codex discovers skills from the skills directory under `CODEX_HOME`. If `CODEX_HOME` is not set, the default location is usually `~/.codex/skills`.
