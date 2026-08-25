@@ -1,6 +1,6 @@
 # Category-Specific Heuristics
 
-Formulation-analysis heuristics by product category for the `skincare-product-research` skill. Load this file during Step A3 (identify the functional architecture) and when comparing products within one category.
+Decision-relevant formulation heuristics by product category for the `skincare-product-research` skill. These are checklists of what to examine, not distilled conclusions — derive the underlying mechanisms at runtime under the mechanism reasoning rules in [`../SKILL.md`](../SKILL.md). Load this file during Step A3 (identify the functional architecture) and Step B4 (comparison dimensions).
 
 ## Cleansers
 

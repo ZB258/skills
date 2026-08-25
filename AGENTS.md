@@ -12,6 +12,7 @@ This repository is a workspace for maintaining multiple Codex skills. Keep guida
 
 - Use LF line endings for all files.
 - Prefer ASCII unless a file already uses non-ASCII or the content requires it.
+- Constrain how agents reason (derivation steps, self-checks against fundamentals, property-attribution discipline) rather than storing distilled domain knowledge; include domain facts only where the agent cannot realistically derive them, and never precomputed conclusions about specific products or claims.
 - Fix obvious spelling mistakes in code, user prompts, documentation, and skill text when encountered, and mention the correction in the final response.
 - Do not add auxiliary files such as README, changelog, or installation notes inside a skill unless they are directly required for the skill to function.
 - Update the repository root `README.md` in the same change whenever a skill is added, removed, renamed, or materially changed.

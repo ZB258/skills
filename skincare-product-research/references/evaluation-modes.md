@@ -256,7 +256,19 @@ For sunscreens, add protection, finish, water resistance, and eye-sting / pillin
 
 For treatment products, add active concentration, evidence level, and irritation risk.
 
-### Step B5 — Rank products by user fit, not generic prestige
+In the "core system / actives" column, state the functional meaning of the system — what it does and how strongly — rather than only INCI names; expand surfactant or filter families on first use.
+
+### Step B5 — Explain the mechanism
+
+Before the ranking, explain how the product category achieves its function and why the shortlisted systems differ in effect, so a non-specialist user can reconstruct the reasoning:
+
+- open with the shared mechanism of the category;
+- derive the variables that actually change outcomes in this category, separating structural constraints from formulator choices;
+- map each shortlisted product to its position on that mechanistic axis, in plain language, and connect the user's original complaint to the mechanism.
+
+Follow the mechanism reasoning rules in [`../SKILL.md`](../SKILL.md) throughout — attribute every property to its correct system level, and check each assertion against fundamentals you are confident in. Do not let the comparison table substitute for this explanation. A user who cannot reconstruct why the top pick wins has not been served.
+
+### Step B6 — Rank products by user fit, not generic prestige
 
 Give a clear top recommendation and explain why it wins for this user.
 

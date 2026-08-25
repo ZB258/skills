@@ -108,7 +108,11 @@ When comparing products, keep the table concise and put detailed reasoning benea
 
 [One paragraph: what type of formula should be prioritized and top pick]
 
+#### How they work
+
+[Mechanism explanation derived at runtime from first principles: how this product class does its job, what actually separates the shortlisted systems, and where each product sits — with every property attributed to its correct system level and each assertion checked against fundamentals. Written for a non-specialist; expand every term on first use; connect the user's stated complaint to the mechanism]
+
 | Product | Core system / actives | Strengths | Weaknesses | Best for | Typical price | Good buy price | Recommendation |
 |---|---|---|---|---|---:|---:|---:|
 
-Then briefly explain the top 2–3 finalists and the main tradeoffs.
+Then briefly explain the top 2–3 finalists and the main tradeoffs, in mechanistic terms where the ranking depends on them.

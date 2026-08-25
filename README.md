@@ -43,13 +43,13 @@ The skill carries no scripts or references; all guidance lives in `SKILL.md`.
 
 ### skincare-product-research
 
-`skincare-product-research` is an evidence-oriented skincare product research expert. It evaluates a specific product or researches and compares products for a stated skin need by reasoning from the full formulation architecture, human clinical evidence, and the user's skin state and routine instead of marketing. It runs in two modes: Mode A evaluates a user-supplied product (identity resolution, functional architecture, marketing-claim audit, seven-dimension scoring, three-level price guidance) and Mode B converts a stated need into criteria and compares a broad candidate pool on decision-relevant tables.
+`skincare-product-research` is an evidence-oriented skincare product research expert. It evaluates a specific product or researches and compares products for a stated skin need by reasoning from the full formulation architecture, human clinical evidence, and the user's skin state and routine instead of marketing. It runs in two modes: Mode A evaluates a user-supplied product (identity resolution, functional architecture, marketing-claim audit, seven-dimension scoring, three-level price guidance) and Mode B converts a stated need into criteria, compares a broad candidate pool on decision-relevant tables, and explains the category mechanism behind the ranking.
 
 Bundled resources:
 
-- `references/evaluation-modes.md`: detailed Mode A (A1–A8) and Mode B (B1–B5) procedures.
+- `references/evaluation-modes.md`: detailed Mode A (A1–A8) and Mode B (B1–B6) procedures, including the mandatory mechanism-explanation step.
 - `references/research-rules.md`: source hierarchy, marketing contamination control, evidence language, and terminology rules.
-- `references/category-heuristics.md`: formulation heuristics for cleansers, moisturizers, sunscreens, and retinoids/acids.
+- `references/category-heuristics.md`: decision-relevant formulation heuristics for cleansers, moisturizers, sunscreens, and retinoids/acids; mechanisms are derived at runtime under the mechanism reasoning rules in `SKILL.md`.
 - `references/scoring-safety-output.md`: score interpretation, safety boundaries, response style, and output templates.
 
 The skill carries no scripts; it relies on the agent's web research for formulations, evidence, and current pricing.
