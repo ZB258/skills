@@ -35,6 +35,12 @@ Bundled resources:
 
 The skill carries no scripts; it drives external tools such as the `mineru` CLI.
 
+### reviewer-response
+
+`reviewer-response` finalizes the reply to a single reviewer comment during a journal major/minor revision. It audits the draft first (splitting every explicit and implied sub-request, cross-checking reply wording against the revised manuscript and the underlying data, re-verifying table and page references against the latest `.aux` and compiled PDF, keeping the tone courteous), then generates deliverables in the collaborator's response-letter format: a Word fragment that pastes directly into the reply docx (bold "About xxx" lead-ins capped at 3–4, three-line tables, vector-only figures via SVG, journal replies self-contained) plus a self-contained HTML delivery page with the audit verdict and copy-ready final text.
+
+The skill carries no scripts or references; all guidance lives in `SKILL.md`.
+
 ### skincare-product-research
 
 `skincare-product-research` is an evidence-oriented skincare product research expert. It evaluates a specific product or researches and compares products for a stated skin need by reasoning from the full formulation architecture, human clinical evidence, and the user's skin state and routine instead of marketing. It runs in two modes: Mode A evaluates a user-supplied product (identity resolution, functional architecture, marketing-claim audit, seven-dimension scoring, three-level price guidance) and Mode B converts a stated need into criteria and compares a broad candidate pool on decision-relevant tables.
